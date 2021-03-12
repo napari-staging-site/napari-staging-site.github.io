@@ -3,9 +3,9 @@
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/><link rel="index" title="Index" href="../../genindex.html" /><link rel="search" title="Search" href="../../search.html" /><link rel="prev" title="creating a napari plugin" href="for_plugin_developers.html" />
 
-    <meta name="generator" content="sphinx-3.5.1, furo 2021.02.21.beta25"/>
+    <meta name="generator" content="sphinx-3.5.2, furo 2021.02.28.beta28"/>
         <title>napari hook specification reference - napari</title>
-      <link rel="stylesheet" href="../../_static/styles/furo.css?digest=33d2fc4f3f180ec1ffc6524e273e21d7d58cbe49">
+      <link rel="stylesheet" href="../../_static/styles/furo.css?digest=be5985a4059b5c2cd56ed0804790452beca62674">
     <link rel="stylesheet" href="../../_static/pygments.css">
     <link media="(prefers-color-scheme: dark)" rel="stylesheet" href="../../_static/pygments_dark.css">
     
@@ -175,6 +175,7 @@
 </li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../../api/stable/napari.utils.html">napari.utils</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label for="toctree-checkbox-9"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../api/stable/napari.utils.Colormap.html">napari.utils.Colormap</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/stable/napari.utils.nbscreenshot.html">napari.utils.nbscreenshot</a></li>
 </ul>
 </li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../../api/stable/napari.plugins.html">napari.plugins</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label for="toctree-checkbox-10"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
@@ -594,7 +595,9 @@ rest of the codebase.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
 <dd class="field-odd"><p><strong>function(s)</strong> – Implementations should provide either a single function, or a list of
-functions. The functions should have Python type annotations so that
+functions. Note that this does not preclude specifying multiple
+separate implementations in the same module or class.
+The functions should have Python type annotations so that
 <a class="reference external" href="https://napari.org/magicgui">magicgui</a> can generate a widget from
 them.</p>
 </dd>
@@ -638,7 +641,9 @@ tuple of <code class="docutils literal notranslate"><span class="pre">(callable,
 arguments for <code class="xref py py-meth docutils literal notranslate"><span class="pre">napari.qt.Window.add_dock_widget()</span></code>. (note, however,
 that <code class="docutils literal notranslate"><span class="pre">shortcut=</span></code> keyword is not yet supported).</p>
 <p>Implementations may also return a list, in which each item must be a
-callable or <code class="docutils literal notranslate"><span class="pre">(callable,</span> <span class="pre">dict)</span></code> tuple.</p>
+callable or <code class="docutils literal notranslate"><span class="pre">(callable,</span> <span class="pre">dict)</span></code> tuple. Note that this does not
+preclude specifying multiple separate implementations in the same module
+or class.</p>
 </p>
 </dd>
 <dt class="field-even">Return type</dt>
@@ -783,7 +788,7 @@ callable or <code class="docutils literal notranslate"><span class="pre">(callab
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../../_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
+    <script src="../../_static/sphinx-book-theme.7d483ff0a819d6edff12ce0b1ead3928.js"></script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"

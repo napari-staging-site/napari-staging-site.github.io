@@ -1,11 +1,11 @@
 <!doctype html>
 <html class="no-js">
   <head><meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width,initial-scale=1"/><link rel="index" title="Index" href="../../genindex.html" /><link rel="search" title="Search" href="../../search.html" /><link rel="next" title="napari.plugins.FunctionType" href="napari.plugins.FunctionType.html" /><link rel="prev" title="napari.utils.Colormap" href="napari.utils.Colormap.html" />
+    <meta name="viewport" content="width=device-width,initial-scale=1"/><link rel="index" title="Index" href="../../genindex.html" /><link rel="search" title="Search" href="../../search.html" /><link rel="next" title="napari.plugins.FunctionType" href="napari.plugins.FunctionType.html" /><link rel="prev" title="napari.utils.nbscreenshot" href="napari.utils.nbscreenshot.html" />
 
-    <meta name="generator" content="sphinx-3.5.1, furo 2021.02.21.beta25"/>
+    <meta name="generator" content="sphinx-3.5.2, furo 2021.02.28.beta28"/>
         <title>napari.plugins - napari</title>
-      <link rel="stylesheet" href="../../_static/styles/furo.css?digest=33d2fc4f3f180ec1ffc6524e273e21d7d58cbe49">
+      <link rel="stylesheet" href="../../_static/styles/furo.css?digest=be5985a4059b5c2cd56ed0804790452beca62674">
     <link rel="stylesheet" href="../../_static/pygments.css">
     <link media="(prefers-color-scheme: dark)" rel="stylesheet" href="../../_static/pygments_dark.css">
     
@@ -175,6 +175,7 @@
 </li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="napari.utils.html">napari.utils</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label for="toctree-checkbox-9"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="napari.utils.Colormap.html">napari.utils.Colormap</a></li>
+<li class="toctree-l3"><a class="reference internal" href="napari.utils.nbscreenshot.html">napari.utils.nbscreenshot</a></li>
 </ul>
 </li>
 <li class="toctree-l2 current has-children current-page"><a class="current reference internal" href="#">napari.plugins</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label for="toctree-checkbox-10"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
@@ -326,7 +327,7 @@ __module__      name of module in which this class was defined</p>
 </dd></dl>
 <dl class="py function">
 <dt id="napari.plugins.magicgui">
-<code class="sig-prename descclassname"><span class="pre">napari.plugins.</span></code><code class="sig-name descname"><span class="pre">magicgui</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">function</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">layout</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'vertical'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">labels</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tooltips</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">call_button</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">auto_call</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">result_widget</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">main_window</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">app</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">param_options</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/magicgui/_magicgui.html#magicgui"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#napari.plugins.magicgui" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname"><span class="pre">napari.plugins.</span></code><code class="sig-name descname"><span class="pre">magicgui</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">function</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">layout</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'vertical'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">labels</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tooltips</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">call_button</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">auto_call</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">result_widget</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">main_window</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">app</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">persist</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">param_options</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/magicgui/_magicgui.html#magicgui"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#napari.plugins.magicgui" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return a <code class="xref py py-class docutils literal notranslate"><span class="pre">FunctionGui</span></code> for <code class="docutils literal notranslate"><span class="pre">function</span></code>.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -346,6 +347,9 @@ by default False</p></li>
 <li><p><strong>main_window</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><em>bool</em></a>) – Whether this widget should be treated as the main app window, with menu bar,
 by default True.</p></li>
 <li><p><strong>app</strong> (<em>magicgui.Application</em><em> or </em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><em>str</em></a><em>, </em><em>optional</em>) – A backend to use, by default <code class="docutils literal notranslate"><span class="pre">None</span></code> (use the default backend.)</p></li>
+<li><p><strong>persist</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><em>bool</em></a><em>, </em><em>optional</em>) – If <cite>True</cite>, when parameter values change in the widget, they will be stored to
+disk (in <cite>~/.config/magicgui/cache</cite>) and restored when the widget is loaded
+again with <code class="docutils literal notranslate"><span class="pre">persist</span> <span class="pre">=</span> <span class="pre">True</span></code>.  By default, <cite>False</cite>.</p></li>
 <li><p><strong>**param_options</strong> (<em>dict of dict</em>) – Any additional keyword arguments will be used as parameter-specific options.
 Keywords MUST match the name of one of the arguments in the function
 signature, and the value MUST be a dict.</p></li>
@@ -445,14 +449,14 @@ decorator.</p>
               </div>
               <svg><use href="#svg-arrow-right"></use></svg>
             </a>
-          <a class="prev-page" href="napari.utils.Colormap.html">
+          <a class="prev-page" href="napari.utils.nbscreenshot.html">
               <svg><use href="#svg-arrow-right"></use></svg>
               <div class="page-info">
                 <div class="context">
                   <span>Previous</span>
                 </div>
                 
-                <div class="title">napari.utils.Colormap</div>
+                <div class="title">napari.utils.nbscreenshot</div>
                 
               </div>
             </a>
@@ -489,7 +493,7 @@ decorator.</p>
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../../_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
+    <script src="../../_static/sphinx-book-theme.7d483ff0a819d6edff12ce0b1ead3928.js"></script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"

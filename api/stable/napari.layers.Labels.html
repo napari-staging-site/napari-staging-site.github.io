@@ -3,9 +3,9 @@
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/><link rel="index" title="Index" href="../../genindex.html" /><link rel="search" title="Search" href="../../search.html" /><link rel="next" title="napari.layers.Layer" href="napari.layers.Layer.html" /><link rel="prev" title="napari.layers.Image" href="napari.layers.Image.html" />
 
-    <meta name="generator" content="sphinx-3.5.1, furo 2021.02.21.beta25"/>
+    <meta name="generator" content="sphinx-3.5.2, furo 2021.02.28.beta28"/>
         <title>napari.layers.Labels - napari</title>
-      <link rel="stylesheet" href="../../_static/styles/furo.css?digest=33d2fc4f3f180ec1ffc6524e273e21d7d58cbe49">
+      <link rel="stylesheet" href="../../_static/styles/furo.css?digest=be5985a4059b5c2cd56ed0804790452beca62674">
     <link rel="stylesheet" href="../../_static/pygments.css">
     <link media="(prefers-color-scheme: dark)" rel="stylesheet" href="../../_static/pygments_dark.css">
     
@@ -175,6 +175,7 @@
 </li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="napari.utils.html">napari.utils</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label for="toctree-checkbox-9"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="napari.utils.Colormap.html">napari.utils.Colormap</a></li>
+<li class="toctree-l3"><a class="reference internal" href="napari.utils.nbscreenshot.html">napari.utils.nbscreenshot</a></li>
 </ul>
 </li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="napari.plugins.html">napari.plugins</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label for="toctree-checkbox-10"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
@@ -288,7 +289,7 @@
 <dl class="py class">
 <dt id="napari.layers.Labels">
 <em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">napari.layers.</span></code><code class="sig-name descname"><span class="pre">Labels</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_colors</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">50</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">properties</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">color</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">seed</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">metadata</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scale</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">translate</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rotate</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">shear</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">affine</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">opacity</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.7</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">blending</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'translucent'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">visible</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">multiscale</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/napari/layers/labels/labels.html#Labels"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#napari.layers.Labels" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">napari.layers.image.image.Image</span></code></p>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">napari.layers.image.image._ImageBase</span></code></p>
 <p>Labels (or segmentation) layer.</p>
 <p>An image-like layer where every pixel contains an integer ID
 corresponding to the region it belongs to.</p>
@@ -436,6 +437,17 @@ arrays.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type</dt>
 <dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)">bool</a></p>
+</dd>
+</dl>
+</dd></dl>
+<dl class="py attribute">
+<dt id="napari.layers.Labels.contour">
+<code class="sig-name descname"><span class="pre">contour</span></code><a class="headerlink" href="#napari.layers.Labels.contour" title="Permalink to this definition">¶</a></dt>
+<dd><p>If greater than 0, displays contours of labels instead of shaded regions
+with a thickness equal to its value.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)">int</a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -685,6 +697,16 @@ blend_func=(‘src_alpha’, ‘one’).</p>
 </dl>
 </dd></dl>
 <dl class="py method">
+<dt id="id3">
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">contour</span></code><a class="headerlink" href="#id3" title="Permalink to this definition">¶</a></dt>
+<dd><p>displays contours of labels instead of shaded regions.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)">int</a></p>
+</dd>
+</dl>
+</dd></dl>
+<dl class="py method">
 <dt id="napari.layers.Labels.contrast_limits">
 <em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">contrast_limits</span></code><a class="headerlink" href="#napari.layers.Labels.contrast_limits" title="Permalink to this definition">¶</a></dt>
 <dd><p>Limits to use for the colormap.</p>
@@ -725,8 +747,8 @@ blend_func=(‘src_alpha’, ‘one’).</p>
 </dl>
 </dd></dl>
 <dl class="py method">
-<dt id="id3">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">data</span></code><a class="headerlink" href="#id3" title="Permalink to this definition">¶</a></dt>
+<dt id="id4">
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">data</span></code><a class="headerlink" href="#id4" title="Permalink to this definition">¶</a></dt>
 <dd><p>Image data.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type</dt>
@@ -930,8 +952,8 @@ vispy/gloo/glsl/misc/spatial_filters.frag</p>
 for the current slice has not been loaded.</p>
 </dd></dl>
 <dl class="py method">
-<dt id="id4">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">mode</span></code><a class="headerlink" href="#id4" title="Permalink to this definition">¶</a></dt>
+<dt id="id5">
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">mode</span></code><a class="headerlink" href="#id5" title="Permalink to this definition">¶</a></dt>
 <dd><p>Interactive mode. The normal, default mode is PAN_ZOOM, which
 allows for normal interactivity with the canvas.</p>
 <p>In PICK mode the cursor functions like a color picker, setting the
@@ -957,8 +979,8 @@ paint with background label, which effectively removes the label.</p>
 </dl>
 </dd></dl>
 <dl class="py method">
-<dt id="id5">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">n_dimensional</span></code><a class="headerlink" href="#id5" title="Permalink to this definition">¶</a></dt>
+<dt id="id6">
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">n_dimensional</span></code><a class="headerlink" href="#id6" title="Permalink to this definition">¶</a></dt>
 <dd><p>paint and fill edits labels across all dimensions.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type</dt>
@@ -987,8 +1009,8 @@ paint with background label, which effectively removes the label.</p>
 </dl>
 </dd></dl>
 <dl class="py method">
-<dt id="id6">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">num_colors</span></code><a class="headerlink" href="#id6" title="Permalink to this definition">¶</a></dt>
+<dt id="id7">
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">num_colors</span></code><a class="headerlink" href="#id7" title="Permalink to this definition">¶</a></dt>
 <dd><p>Number of unique colors to use in colormap.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type</dt>
@@ -997,8 +1019,8 @@ paint with background label, which effectively removes the label.</p>
 </dl>
 </dd></dl>
 <dl class="py method">
-<dt id="id7">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">opacity</span></code><a class="headerlink" href="#id7" title="Permalink to this definition">¶</a></dt>
+<dt id="id8">
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">opacity</span></code><a class="headerlink" href="#id8" title="Permalink to this definition">¶</a></dt>
 <dd><p>Opacity value between 0.0 and 1.0.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type</dt>
@@ -1041,8 +1063,8 @@ calls.</p></li>
 set to true, existing labels will be preserved during painting.</p>
 </dd></dl>
 <dl class="py method">
-<dt id="id8">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">properties</span></code><a class="headerlink" href="#id8" title="Permalink to this definition">¶</a></dt>
+<dt id="id9">
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">properties</span></code><a class="headerlink" href="#id9" title="Permalink to this definition">¶</a></dt>
 <dd><p>Properties for each label.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type</dt>
@@ -1147,8 +1169,8 @@ through to find the first one that can save the data.</p></li>
 </dl>
 </dd></dl>
 <dl class="py method">
-<dt id="id9">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">seed</span></code><a class="headerlink" href="#id9" title="Permalink to this definition">¶</a></dt>
+<dt id="id10">
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">seed</span></code><a class="headerlink" href="#id10" title="Permalink to this definition">¶</a></dt>
 <dd><p>Seed for colormap random generator.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type</dt>
@@ -1167,8 +1189,8 @@ through to find the first one that can save the data.</p></li>
 </dl>
 </dd></dl>
 <dl class="py method">
-<dt id="id10">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">selected_label</span></code><a class="headerlink" href="#id10" title="Permalink to this definition">¶</a></dt>
+<dt id="id11">
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">selected_label</span></code><a class="headerlink" href="#id11" title="Permalink to this definition">¶</a></dt>
 <dd><p>Index of selected label.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type</dt>
@@ -1319,7 +1341,7 @@ through to find the first one that can save the data.</p></li>
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../../_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
+    <script src="../../_static/sphinx-book-theme.7d483ff0a819d6edff12ce0b1ead3928.js"></script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"

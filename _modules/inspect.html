@@ -3,9 +3,9 @@
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/><link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Search" href="../search.html" />
 
-    <meta name="generator" content="sphinx-3.5.1, furo 2021.02.21.beta25"/>
+    <meta name="generator" content="sphinx-3.5.2, furo 2021.02.28.beta28"/>
         <title>inspect - napari</title>
-      <link rel="stylesheet" href="../_static/styles/furo.css?digest=33d2fc4f3f180ec1ffc6524e273e21d7d58cbe49">
+      <link rel="stylesheet" href="../_static/styles/furo.css?digest=be5985a4059b5c2cd56ed0804790452beca62674">
     <link rel="stylesheet" href="../_static/pygments.css">
     <link media="(prefers-color-scheme: dark)" rel="stylesheet" href="../_static/pygments_dark.css">
     
@@ -175,6 +175,7 @@
 </li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../api/stable/napari.utils.html">napari.utils</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label for="toctree-checkbox-9"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../api/stable/napari.utils.Colormap.html">napari.utils.Colormap</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/stable/napari.utils.nbscreenshot.html">napari.utils.nbscreenshot</a></li>
 </ul>
 </li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../api/stable/napari.plugins.html">napari.plugins</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label for="toctree-checkbox-10"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
@@ -355,7 +356,7 @@
 <span class="sd">        __file__        filename (missing for built-in modules)"""</span>
     <span class="k">return</span> <span class="nb">isinstance</span><span class="p">(</span><span class="nb">object</span><span class="p">,</span> <span class="n">types</span><span class="o">.</span><span class="n">ModuleType</span><span class="p">)</span>
 
-<div class="viewcode-block" id="isclass"><a class="viewcode-back" href="../api/stable/napari.plugins.html#napari.plugins.isclass">[docs]</a><span class="k">def</span> <span class="nf">isclass</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+<div class="viewcode-block" id="isclass"><a class="viewcode-back" href="../api/stable/napari.plugins.html#napari.layers.isclass">[docs]</a><span class="k">def</span> <span class="nf">isclass</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
     <span class="sd">"""Return true if the object is a class.</span>
 
 <span class="sd">    Class objects provide these attributes:</span>
@@ -584,7 +585,7 @@
             <span class="ow">or</span> <span class="n">ismethod</span><span class="p">(</span><span class="nb">object</span><span class="p">)</span>
             <span class="ow">or</span> <span class="n">ismethoddescriptor</span><span class="p">(</span><span class="nb">object</span><span class="p">))</span>
 
-<span class="k">def</span> <span class="nf">isabstract</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+<div class="viewcode-block" id="isabstract"><a class="viewcode-back" href="../api/stable/napari.layers.html#napari.layers.isabstract">[docs]</a><span class="k">def</span> <span class="nf">isabstract</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
     <span class="sd">"""Return true if the object is an abstract base class (ABC)."""</span>
     <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="nb">object</span><span class="p">,</span> <span class="nb">type</span><span class="p">):</span>
         <span class="k">return</span> <span class="kc">False</span>
@@ -606,7 +607,7 @@
             <span class="n">value</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="nb">object</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
             <span class="k">if</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="s2">"__isabstractmethod__"</span><span class="p">,</span> <span class="kc">False</span><span class="p">):</span>
                 <span class="k">return</span> <span class="kc">True</span>
-    <span class="k">return</span> <span class="kc">False</span>
+    <span class="k">return</span> <span class="kc">False</span></div>
 
 <span class="k">def</span> <span class="nf">getmembers</span><span class="p">(</span><span class="nb">object</span><span class="p">,</span> <span class="n">predicate</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
     <span class="sd">"""Return all members of an object as (name, value) pairs sorted by name.</span>
@@ -3386,7 +3387,7 @@
         <span class="k">return</span> <span class="n">rendered</span>
 
 
-<div class="viewcode-block" id="signature"><a class="viewcode-back" href="../api/stable/napari.plugins.html#napari.plugins.signature">[docs]</a><span class="k">def</span> <span class="nf">signature</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">follow_wrapped</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+<div class="viewcode-block" id="signature"><a class="viewcode-back" href="../api/stable/napari.plugins.html#napari.layers.signature">[docs]</a><span class="k">def</span> <span class="nf">signature</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">follow_wrapped</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
     <span class="sd">"""Get a signature object for the passed callable."""</span>
     <span class="k">return</span> <span class="n">Signature</span><span class="o">.</span><span class="n">from_callable</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="n">follow_wrapped</span><span class="o">=</span><span class="n">follow_wrapped</span><span class="p">)</span></div>
 
@@ -3486,7 +3487,7 @@
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
+    <script src="../_static/sphinx-book-theme.7d483ff0a819d6edff12ce0b1ead3928.js"></script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"

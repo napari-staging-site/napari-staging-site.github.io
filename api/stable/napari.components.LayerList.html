@@ -3,9 +3,9 @@
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/><link rel="index" title="Index" href="../../genindex.html" /><link rel="search" title="Search" href="../../search.html" /><link rel="next" title="napari.components.ViewerModel" href="napari.components.ViewerModel.html" /><link rel="prev" title="napari.components.Dims" href="napari.components.Dims.html" />
 
-    <meta name="generator" content="sphinx-3.5.1, furo 2021.02.21.beta25"/>
+    <meta name="generator" content="sphinx-3.5.2, furo 2021.02.28.beta28"/>
         <title>napari.components.LayerList - napari</title>
-      <link rel="stylesheet" href="../../_static/styles/furo.css?digest=33d2fc4f3f180ec1ffc6524e273e21d7d58cbe49">
+      <link rel="stylesheet" href="../../_static/styles/furo.css?digest=be5985a4059b5c2cd56ed0804790452beca62674">
     <link rel="stylesheet" href="../../_static/pygments.css">
     <link media="(prefers-color-scheme: dark)" rel="stylesheet" href="../../_static/pygments_dark.css">
     
@@ -175,6 +175,7 @@
 </li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="napari.utils.html">napari.utils</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label for="toctree-checkbox-9"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="napari.utils.Colormap.html">napari.utils.Colormap</a></li>
+<li class="toctree-l3"><a class="reference internal" href="napari.utils.nbscreenshot.html">napari.utils.nbscreenshot</a></li>
 </ul>
 </li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="napari.plugins.html">napari.plugins</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label for="toctree-checkbox-10"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
@@ -287,7 +288,7 @@
 <h1>napari.components.LayerList<a class="headerlink" href="#napari-components-layerlist" title="Permalink to this headline">¶</a></h1>
 <dl class="py class">
 <dt id="napari.components.LayerList">
-<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">napari.components.</span></code><code class="sig-name descname"><span class="pre">LayerList</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">()</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">basetype</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">()</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lookup</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">{}</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/napari/components/layerlist.html#LayerList"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#napari.components.LayerList" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">napari.components.</span></code><code class="sig-name descname"><span class="pre">LayerList</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">()</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/napari/components/layerlist.html#LayerList"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#napari.components.LayerList" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">napari.utils.events.containers._typed.TypedMutableSequence</span></code>[<code class="xref py py-obj docutils literal notranslate"><span class="pre">napari.utils.events.containers._typed._T</span></code>]</p>
 <p>List-like layer collection with built-in reordering and callback hooks.</p>
 <dl class="field-list simple">
@@ -342,7 +343,9 @@
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>value</strong> (<em>Any</em>) – A value to lookup</p></li>
+<li><p><strong>value</strong> (<em>Any</em>) – A value to lookup.  If <cite>type(value)</cite> is in the lookups functions
+provided for this class, then values in the list will be searched
+using the corresponding lookup converter function.</p></li>
 <li><p><strong>start</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><em>int</em></a><em>, </em><em>optional</em>) – The starting index to search, by default 0</p></li>
 <li><p><strong>stop</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><em>int</em></a><em>, </em><em>optional</em>) – The ending index to search, by default None</p></li>
 </ul>
@@ -629,7 +632,7 @@ through to find the first one that can save the data.</p></li>
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../../_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
+    <script src="../../_static/sphinx-book-theme.7d483ff0a819d6edff12ce0b1ead3928.js"></script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
